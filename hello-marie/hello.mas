@@ -1,0 +1,10 @@
+load zerar
+add valor1
+add valor2
+add valor3
+subt valor1
+halt
+zerar, dec 0
+valor1, dec 0100
+valor2, dec 0200
+valor3, dec 0300
