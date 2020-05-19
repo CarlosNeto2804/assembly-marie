@@ -1,0 +1,18 @@
+ORG    0
+condicao,   LOAD        contador
+            SUBT        valor_para_subtrair
+            SKIPCOND    000
+            JUMP        fim_do_programa
+
+loop,   LOAD    contador
+        ADD     valor_para_somar
+        STORE   contador
+        LOAD    contador
+        OUTPUT
+        JUMP    condicao
+
+fim_do_programa,    HALT
+
+contador, DEC   0
+valor_para_subtrair,    DEC     10
+valor_para_somar,       DEC     1
