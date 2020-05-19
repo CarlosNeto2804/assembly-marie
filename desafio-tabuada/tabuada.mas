@@ -1,0 +1,26 @@
+ORG     0
+
+condicao,   LOAD        contador
+            SUBT        numero_linhas
+            SKIPCOND    000
+            JUMP        fim_do_programa
+
+loop,   LOAD    contador
+        ADD     incrementador
+        STORE   contador
+        LOAD    index
+        OUTPUT
+        ADD     const_soma
+        STORE   index
+        JUMP    condicao
+
+fim_do_programa,    LOAD    inicio
+                    STORE   index
+                    HALT
+
+index,          HEX     0      
+inicio,         HEX     0
+contador,       DEC     0
+incrementador,  DEC     1
+const_soma,     DEC     2
+numero_linhas,  DEC     11
