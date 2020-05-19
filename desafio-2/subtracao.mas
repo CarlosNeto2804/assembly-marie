@@ -1,0 +1,12 @@
+    ORG     0
+    LOAD    x
+    SUBT    y
+    STORE   z
+    
+    LOAD    z
+    OUTPUT
+    HALT
+
+x,  DEC     10
+y,  DEC     5
+z,  DEC     0

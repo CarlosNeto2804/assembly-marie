@@ -1,0 +1,13 @@
+    ORG     0   /define inicio do programa
+    LOAD    x   /carrega x em AC
+    ADD     y   /conteudo de AC + y
+    STORE   z   /guarda o valor de AC em z
+
+    LOAD    z   /carrega z em AC
+    OUTPUT      /mostra o valor em AC
+    HALT        /finaliza programa
+
+x,  DEC     1 /cria a variavel x e insere o valor 1
+y,  DEC     2
+z,  DEC     0
+
