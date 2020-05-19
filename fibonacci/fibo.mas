@@ -1,0 +1,38 @@
+ORG 0
+condicao,   LOAD        contador
+            SUBT        valor_maximo
+            SKIPCOND    000
+            JUMP        fim_do_programa
+
+loop,   LOAD    contador
+        ADD     incremento
+        STORE   contador
+        JNS     fibo_calc
+        JUMP    condicao
+
+fibo_calc,  HEX     000
+            CLEAR   
+            ADD     numero_a
+            ADD     numero_b
+            STORE   soma
+
+            LOAD    numero_b
+            STORE   numero_a
+            
+            LOAD    soma
+            STORE   numero_b
+            
+            LOAD    soma
+            OUTPUT
+
+            JUMPI   fibo_calc
+
+fim_do_programa,    HALT
+
+
+incremento,     DEC     1
+contador,       DEC     0
+valor_maximo,   DEC     10
+numero_a,       DEC     0
+numero_b,       DEC     1
+soma,           DEC     0
